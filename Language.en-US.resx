@@ -754,4 +754,7 @@ Please report to the author,thx!</value>
   <data name="Items127" xml:space="preserve">
     <value>PrimeSword</value>
   </data>
+  <data name="Items-ArcTool" xml:space="preserve">
+    <value>ArcTool</value>
+  </data>
 </root>

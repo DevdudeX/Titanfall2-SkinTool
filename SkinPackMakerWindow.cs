@@ -459,10 +459,10 @@ namespace Titanfall2_SkinTool
                     }
 
                     else
-					{
+                    {
                     illuminationImage.SetCompression(CompressionMethod.DXT1);
                     SaveTexture(SelectedWeapon + "_Default_ilm.dds", illuminationImage, zipArchive);
-					}
+                    }
                     i += 3;
                     progressForm?.AdvanceEntry(i);
                 }
@@ -827,13 +827,13 @@ namespace Titanfall2_SkinTool
                     case "Cloak_helmet": 
                     case "Cloak_gauntlet":
                     case "Cloak_ghillie":
-					//StimPilot
+                    //StimPilot
                     case "Stim_fbody":
                     case "Stim_mbody":
                     case "Stim_jumpkit":
-					case "Stim_fjumpkit":
+                    case "Stim_fjumpkit":
                     case "Stim_gear":
-					case "Stim_fgear":
+                    case "Stim_fgear":
                     case "Stim_head": 
                     case "Stim_gauntlet":
                         {
@@ -923,6 +923,12 @@ namespace Titanfall2_SkinTool
                             EnableTexture(illuminationPictureBox);
                             EnableTexture(aoPictureBox);
                             EnableTexture(cavityPictureBox);
+                            break;
+                        }
+                    case "ArcTool":
+                        {
+                            EnableTexture(colorPictureBox);
+                            EnableTexture(illuminationPictureBox);
                             break;
                         }
                     case "NULL":
@@ -1086,6 +1092,7 @@ namespace Titanfall2_SkinTool
                         rm.GetString("Items40"),
                         rm.GetString("Items41"),
                         rm.GetString("Items39"),
+                        rm.GetString("Items-ArcTool"),
                         //副武器手枪
                         rm.GetString("tip9"),
                         rm.GetString("Items36"),
@@ -1180,7 +1187,7 @@ namespace Titanfall2_SkinTool
                         rm.GetString("Items107"),
                         rm.GetString("Items108"),
                         rm.GetString("Items109"),
-						rm.GetString("Items110"),
+                        rm.GetString("Items110"),
                         //Wall+Pilot Parts
                         rm.GetString("tip23"),
                         rm.GetString("Items111"),
@@ -1734,6 +1741,9 @@ namespace Titanfall2_SkinTool
                 case "PrimeSword":
                 case "至尊浪人剑":
                     SelectedWeapon = "PrimeSword";
+                    break;
+                case "ArcTool":
+                    SelectedWeapon = "ArcTool";
                     break;
                 default:
                     SelectedWeapon = "NULL";

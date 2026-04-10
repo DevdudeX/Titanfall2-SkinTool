@@ -3367,6 +3367,33 @@ namespace Titanfall2_SkinTool.Titanfall2.WeaponData
                         }
                         break;
                         //泰坦武器
+                    case "ArcTool":
+                        // FIXME: WIP - not all textures supported
+                        Default.AntiTitan.ArcTool arctool = new Default.AntiTitan.ArcTool();
+                        if (str.Contains("col"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = arctool.ArcTool_col[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(arctool.ArcTool_col[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(arctool.ArcTool_col[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(arctool.ArcTool_col[imagecheck].seeklength);
+                        }
+                        if (str.Contains("ilm"))
+                        {
+                            int i = 0;
+                            FilePath[0, i] = arctool.ArcTool_ilm[imagecheck].name;
+                            i++;
+                            FilePath[0, i] = Convert.ToString(arctool.ArcTool_ilm[imagecheck].seek);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(arctool.ArcTool_ilm[imagecheck].length);
+                            i++;
+                            FilePath[0, i] = Convert.ToString(arctool.ArcTool_ilm[imagecheck].seeklength);
+                        }
+                        break;
+
                     case "BroadSword":
                         Default.Titan.BroadSword broadsword = new Default.Titan.BroadSword();
                         if (str.Contains("col"))
